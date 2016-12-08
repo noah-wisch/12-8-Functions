@@ -1,6 +1,6 @@
 console.log('#1 Sum')
 
-function sum (first, second) {
+function sum(first, second) {
     return (first + second);
 }
 
@@ -11,7 +11,7 @@ console.log(answer);
 
 console.log('#2 Avg')
 
-function avg (one, two, three) {
+function avg(one, two, three) {
     return ((one + two + three) / 3);
 }
 
@@ -26,7 +26,7 @@ console.log('#3 greaterThan')
 // takes two parameters and returns true if the second parameter is greater than the first
 // Otherwise the function should return false.
 
-function greaterThan (one, two) {
+function greaterThan(one, two) {
     if (two > one) {
         return true;
     } else {
@@ -34,7 +34,7 @@ function greaterThan (one, two) {
     }
 }
 
-console.log( greaterThan(20, 10) );
+console.log(greaterThan(20, 10));
 
 /*------------------------------------------*/
 
@@ -61,17 +61,52 @@ console.log( greaterThan(20, 10) );
 
 console.log('#5 containsVowel')
 
-function containsVowel (word) {
-    let freq = 0;
+let vowels = ['a', 'e', 'i', 'o', 'u'];
+function containsVowel(word) {
 
-    for ( let i = 0; i < word.length; i++) {
-        // logical operators
-        // &&    and
-        // ||   or
-        // !    not
-        if (word[i] === 'a, e, i, o, u' || word[i] == 'A, E, I, O, U') {
-            freq = freq + 1; 
+    for (let i = 0; i < word.length; i++) {
+        for (let j = 0; j < vowels.length; j++) {
+            if (word[i] === vowels[j]) {
+                return true;
+            }
         }
     }
+    return false;
+}
 
-    return freq;
+let word = containsVowel('wrd');
+console.log(word);
+
+
+// console.log(containsVowel ('sdfeoad') );
+
+/*------------------------------------------*/
+
+console.log('#6 pigLatin')
+
+// Write a function called piglatin that takes a single string and returns the 
+// piglatin version of that string. 
+// Hint: look into the split() function that you can call on strings.
+
+
+/*------------------------------------------*/
+
+console.log('#fizzbuzz')
+
+function fizzbuzz(max) {
+    for (let i = 1; i <= max; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log('fizzbuzz');
+        } else if (i % 5 === 0) {
+            console.log('buzz');
+        } else if (i % 3 === 0) {
+            console.log('fizz');
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+fizzbuzz(21);
+
+/*------------------------------------------*/
