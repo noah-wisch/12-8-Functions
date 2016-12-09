@@ -38,24 +38,36 @@ console.log(greaterThan(20, 10));
 
 /*------------------------------------------*/
 
-// console.log('#4 secondLargest')
+console.log('#4 secondLargest')
 
-// function secondLargest (nums) {
-//     // console.log('running');
-//     let largest = nums[0];
-//     let second = nums[1];
+let largest = 0;
+let array = [1, 4, 8, 15, 2];
+// let secondlarge = 0;
 
-//     for (let i = 0; i <nums.length; i++) {
-//         if (largest < nums[i]) {
-//             largest = second[i];
-//         }
-//     }
-//     return second;
-// }
+function secondLargest(array) { //dis is da first (finding the largest number)
+    for (let i = 0; i < array.length; i++) {
+        if (largest < array[i]) {
+            largest = array[i];
+        }
+    }
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) { //dis is setting up the new array
+        if (largest !== array[i]) {
+            newArray.push(array[i]);
+        }
+    }
 
-// let nums = [0, 10, 20, 15, 30];
+    largest = 0;
 
-// console.log( secondLargest(nums) );
+    for (let i = 0; i < newArray.length; i++) { //this is getting the effing answer!
+        if (largest < newArray[i]) {
+            largest = newArray[i];
+        }
+    }
+    return largest;
+}
+
+console.log(secondLargest(array));
 
 /*------------------------------------------*/
 
@@ -77,36 +89,74 @@ function containsVowel(word) {
 let word = containsVowel('wrd');
 console.log(word);
 
+/*------------------------------------------*/
 
-// console.log(containsVowel ('sdfeoad') );
+// console.log('#6 pigLatin')
+
+// function pigLatin (letters) {
+//   // 1. convert word into array w/ split
+//   // 2. set letter [0] to index
+//   // 3. 
+// let word = letters.split('');
+// let last = [0];
+// for ( i = 0; i < letters.length; i++) {
+//     }
+// }
+
+// let final = pigLatin('tiger');
+// console.log(final);
 
 /*------------------------------------------*/
 
-console.log('#6 pigLatin')
+// console.log('#fizzbuzz')
 
-// Write a function called piglatin that takes a single string and returns the 
-// piglatin version of that string. 
-// Hint: look into the split() function that you can call on strings.
+// function fizzbuzz(max) {
+//     for (let i = 1; i <= max; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             console.log('fizzbuzz');
+//         } else if (i % 5 === 0) {
+//             console.log('buzz');
+//         } else if (i % 3 === 0) {
+//             console.log('fizz');
+//         } else {
+//             console.log(i);
+//         }
+//     }
+// }
 
+// fizzbuzz(21);
 
 /*------------------------------------------*/
 
-console.log('#fizzbuzz')
+console.log('#7 longestWord')
 
-function fizzbuzz(max) {
-    for (let i = 1; i <= max; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log('fizzbuzz');
-        } else if (i % 5 === 0) {
-            console.log('buzz');
-        } else if (i % 3 === 0) {
-            console.log('fizz');
-        } else {
-            console.log(i);
+function longestWord(sentence) {
+    // 1. Convert sentence into an array
+    // 2. Search through words for the largest letter count
+    //3. Once we've checked them all, return the longest one 
+    let words = sentence.split(' '); // array of strings
+    let longest = 0; // length of the longest word so far
+    let keeper = '';
+
+    for (i = 0; i < words.length; i++) {
+        if (words[i].length > longest) { // if this word is longer than the longest so far
+            longest = words[i].length; // we have a new longest words
+            keeper = words[i];
+            console.log('found a new longest: ' + keeper);
         }
     }
+    // returns a string
+    return keeper;
 }
 
-fizzbuzz(21);
 
-/*------------------------------------------*/
+
+
+let winner = longestWord('how much wood would a woodchuck chuck?');
+console.log(winner);
+
+// split ()
+/* let sentence = 'how much wood would a woodchuck chuck?'
+let words = sentence.split(' '); // to get one word 'woodchuck' you could console.log words[5];
+console.log(sentence.split (' '));
+*/
