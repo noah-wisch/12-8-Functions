@@ -91,38 +91,41 @@ console.log(word);
 
 /*------------------------------------------*/
 
-// console.log('#6 pigLatin')
+console.log('#6 pigLatin')
 
-// function pigLatin (letters) {
-//   // 1. convert word into array w/ split
-//   // 2. set letter [0] to index
-//   // 3. 
-// let word = letters.split('');
-// let last = [0];
-// for ( i = 0; i < letters.length; i++) {
-//     }
-// }
+function pigLatin(word) {
+    // 1. convert word into array w/ split
+    // 2. set letter [0] to index
+    // 3. move [0] to end og array
+    // 4. concatinate 'ay' to end of word
+    let end = ('ay');
+    let letters = word
+    let cutoff = letters.slice(0, 1);
+    let main = letters.slice(-4);
+    let keeper = (main + cutoff + end)
+    return keeper;
+}
 
-// let final = pigLatin('tiger');
-// console.log(final);
+let final = pigLatin('tiger');
+console.log(final);
 
 /*------------------------------------------*/
 
-// console.log('#fizzbuzz')
+console.log('#fizzbuzz')
 
-// function fizzbuzz(max) {
-//     for (let i = 1; i <= max; i++) {
-//         if (i % 3 === 0 && i % 5 === 0) {
-//             console.log('fizzbuzz');
-//         } else if (i % 5 === 0) {
-//             console.log('buzz');
-//         } else if (i % 3 === 0) {
-//             console.log('fizz');
-//         } else {
-//             console.log(i);
-//         }
-//     }
-// }
+function fizzbuzz(max) {
+    for (let i = 1; i <= max; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log('fizzbuzz');
+        } else if (i % 5 === 0) {
+            console.log('buzz');
+        } else if (i % 3 === 0) {
+            console.log('fizz');
+        } else {
+            console.log(i);
+        }
+    }
+}
 
 // fizzbuzz(21);
 
@@ -148,9 +151,6 @@ function longestWord(sentence) {
     // returns a string
     return keeper;
 }
-
-
-
 
 let winner = longestWord('how much wood would a woodchuck chuck?');
 console.log(winner);
