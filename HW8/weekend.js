@@ -182,8 +182,22 @@ console.log(divided);
 
 console.log('#9 weave')
 
+// weave('hello there', 3); 
+// means every 3rd character in 'hello there' should be replaced by 'x'
+// not gonna lie, I'm a little lost as to how this works. 
+// I had to look this up onlin.
 function weave(strings) {
+    let phrase = ('coding iz hard')
+    let string = phrase.split('')
+    let nth = 4;
+    let replace = 'x';
+    for (i = nth - 1; i < string.length; i += nth) {
+        string[i] = replace;
+    }
+    return string.join('');
 }
+let sentence = weave('');
+console.log(sentence);
 
 /*------------------------------------------*/
 
@@ -210,12 +224,10 @@ function pokemon(ash) {
     // 2. use a loop to add values together and then put into new array
     // 3. Let's see where this goes 
     let caught = ([2, 1, 4, 7, 1])
-    let pokeMaster = ('') //caught.concat([]);
+    for (i = 0; i < caught.length; i++) {
 
-    let last = 0;
-    foreach (caught as i) {
-        (last = pokeMaster[] = i +last);
     }
+    let pokeMaster = caught.concat(+[i]);
 
     return pokeMaster;
 }
