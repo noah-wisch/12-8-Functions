@@ -160,3 +160,65 @@ console.log(winner);
 let words = sentence.split(' '); // to get one word 'woodchuck' you could console.log words[5];
 console.log(sentence.split (' '));
 */
+
+/*------------------------------------------*/
+
+console.log('#8 divisors')
+
+//Write a function called divisors that accepts a number 
+//and returns an array of all of the numbers that divide evenly into it.
+
+function divisors(num) {
+    // 1. input a number
+    // 2. use some sort of .something to seperate it, maybe split?
+    // 3. output the divisors, maybe in an array
+
+}
+
+let divided = divisors(10);
+console.log(divided);
+
+/*------------------------------------------*/
+
+console.log('#9 weave')
+
+function weave(strings) {
+}
+
+/*------------------------------------------*/
+
+console.log('#10 bonus')
+
+function bonus(cost) {
+    // 1. input the bill amount
+    // 2. variable for 20% and Math.ceil(total)
+    // 3. output the cost
+    let bill = (17.83);
+    let tip = (bill * .20);
+    return Math.ceil(bill + tip);
+}
+
+let total = bonus('');
+console.log(total);
+
+/*------------------------------------------*/
+
+console.log('#11 pokemon')
+
+function pokemon(ash) {
+    // 1. input values into array pokemon
+    // 2. use a loop to add values together and then put into new array
+    // 3. Let's see where this goes 
+    let caught = ([2, 1, 4, 7, 1])
+    let pokeMaster = ('') //caught.concat([]);
+
+    let last = 0;
+    foreach (caught as i) {
+        (last = pokeMaster[] = i +last);
+    }
+
+    return pokeMaster;
+}
+
+let Champion = pokemon(['']);
+console.log(Champion);
