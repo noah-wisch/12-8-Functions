@@ -40,26 +40,29 @@ console.log(greaterThan(20, 10));
 
 console.log('#4 secondLargest')
 
-let largest = 0;
-let array = [1, 4, 8, 15, 2];
-// let secondlarge = 0;
+let array = [1, 20, 8, 15, 2];
 
-function secondLargest(array) { //dis is da first (finding the largest number)
-    for (let i = 0; i < array.length; i++) {
-        if (largest < array[i]) {
-            largest = array[i];
+function secondLargest(nums) {
+    let largest = 0;
+    //this is da first (finding the largest number)
+    for (let i = 0; i < nums.length; i++) {
+        if (largest < nums[i]) {
+            largest = nums[i];
         }
     }
     let newArray = [];
-    for (let i = 0; i < array.length; i++) { //dis is setting up the new array
-        if (largest !== array[i]) {
-            newArray.push(array[i]);
+    for (let i = 0; i < nums.length; i++) {
+        //this is setting up the new array
+        if (largest !== nums[i]) {
+            newArray.push(nums[i]);
+            //push() is an array operation that means 'add to'
         }
     }
 
     largest = 0;
 
-    for (let i = 0; i < newArray.length; i++) { //this is getting the effing answer!
+    for (let i = 0; i < newArray.length; i++) {
+        //this is getting the effing answer!
         if (largest < newArray[i]) {
             largest = newArray[i];
         }
